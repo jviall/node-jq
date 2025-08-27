@@ -49,8 +49,8 @@ const JQ_INFO = {
 }
 
 const JQ_NAME_MAP = {
-  def: 'jq',
-  win32: 'jq.exe',
+  def: '_jq',
+  win32: '_jq.exe',
 }
 const JQ_NAME =
   PLATFORM in JQ_NAME_MAP ? JQ_NAME_MAP[PLATFORM] : JQ_NAME_MAP.def

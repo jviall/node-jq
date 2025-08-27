@@ -62,8 +62,8 @@ export const commandFactory = (
   const { args, stdin } = validateArguments(filter, json, options ?? {})
 
   return {
-    command: JQ_PATH,
-    args,
+    command: process.execPath,
+    args: [JQ_PATH, ...args],
     stdin,
   }
 }

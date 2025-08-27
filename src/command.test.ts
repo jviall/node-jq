@@ -9,8 +9,8 @@ const PATH_JSON_FIXTURE = path.join(PATH_FIXTURES, '1.json')
 const FILTER_VALID = '.repository.type'
 
 const EMPTY_OPTION_RESULT = {
-  command: path.join(__dirname, '../bin/jq'),
-  args: [FILTER_VALID, PATH_JSON_FIXTURE],
+  command: process.execPath, // use same node
+  args: [path.join(__dirname, '../bin/jq'), FILTER_VALID, PATH_JSON_FIXTURE],
   stdin: '',
 }
 
