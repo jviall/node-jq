@@ -16,7 +16,17 @@
 $ npm install node-jq --save
 # or
 $ yarn add node-jq
+# or
+$ pnpm add node-jq
 ```
+
+> [!NOTE]
+> Because of how `pnpm` symlinks dependencies into a single `node_modules` folder, the default binary installation will fail.
+> As a workaround, add a `postinstall` script that retries the installation for each `package.json` which depends on `node-jq`:
+>
+> ```sh
+> "postinstall": "node node_modules/node-jq/scripts/install-binary.mjs"
+> ```
 
 ## Fast
 
